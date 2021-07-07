@@ -1,5 +1,5 @@
 <template>
-  <el-button type="danger" @click.prevent="deleteTask(index)">Delete</el-button>
+  <el-button type="danger" @click.prevent="deleteTask(taskid)">Delete</el-button>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   emits: ["delete-task"],
   methods: {
     deleteTask() {
-      this.$emit("delete-task", this.index);
+      this.$emit("delete-task", this.taskid);
     }
   }
 };
